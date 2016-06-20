@@ -27,7 +27,8 @@ diff_1 = [list(item) for item in set(tuple(row) for row in diff_set)]
 
 all_daily = open('/Users/maddiehuffman/Desktop/broken/MPD/MRPmailandphoneNEW.csv','w')
 ad = csv.writer(all_daily, dialect='excel')
-all_daily.write("BALLOTID,VOTERID,SPOILEDIND,REJECTED,BALLOTNUMBER,BALLOTTYPE,DATESENT,DATERETURNED,APPRETURNED,COUNTY,JURISDICTION,CBPRECINCT,LASTNAME,FIRSTNAME,ADDRESES1,ADDRESS2,ADDRESS3,ADDRESS4,ADDRESS5,SPOILED_BALLOTS,YOB,UOCAVASTATUS \n")
+all_daily.write("HHName,LastName,FirstName,MiddleName,SuffixName,PrimaryAddress1,PrimaryCity,PrimaryState,PrimaryZip,PrimaryOddEvenCode,PrimaryHouseNumber,PrimaryHouseHalf,PrimaryStreetPre,PrimaryStreetName,PrimaryStreetType,PrimaryStreetPost,PrimaryUnit,PrimaryUnitNumber,SecondaryAddress1,SecondaryCity,SecondaryState,SecondaryZip,SecondaryUnit,SecondaryUnitNumber,PrimaryPhone,TelephoneReliabilityCode,EMail,DOB,Gender,ObservedParty,RegistrationDate,GeneralFrequency,PrimaryFrequency,OverAllFrequency,GeneralAbsenteeStatus,PrimaryAbsenteeStatus,CDName,LDName,SDName,CountyName,PrecinctNumber,VoterKey,JurisdictionalVoterId,ClientId,StateVoterId,Latitude,Longitude,MapCode,CellularPhone,HomePhone,OtherPhone,WorkPhone,Township,County Commissioner District \n")
+#all_daily.write("BALLOTID,VOTERID,SPOILEDIND,REJECTED,BALLOTNUMBER,BALLOTTYPE,DATESENT,DATERETURNED,APPRETURNED,COUNTY,JURISDICTION,CBPRECINCT,LASTNAME,FIRSTNAME,ADDRESES1,ADDRESS2,ADDRESS3,ADDRESS4,ADDRESS5,SPOILED_BALLOTS,YOB,UOCAVASTATUS \n")
 for a_list in diff_1:
     ad.writerow(a_list)
 all_daily.close()
